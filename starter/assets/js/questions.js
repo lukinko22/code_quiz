@@ -1,27 +1,27 @@
 var questions = [
     {
-        title: "The condition in an if / else statement is enclosed within ____.",
-        choices: ["quotes","curly brackets","parentheses","square brackets"],
-        answer: "parentheses"
+        title: "What day of the week is the best?",
+        choices: ["sunday","wednesday","monday","friday"],
+        answer: "friday"
     },
     {
-        title: "Arrays in JavaScript can be used to store ____.",
-        choices: ["numbers and strings","other arrays","booleans","all of the above"],
-        answer: "all of the above"
+        title: "How much Cristiano Ronaldo earns a year?",
+        choices: ["10 milion","1 milion","20 milion","50 milion"],
+        answer: "50 milion"
     },
     {
-        title: "A very useful tool used during development and debugging for printing to the console",
-        choices: ["JavaScript","terminal / bash","for loops","console.log"],
-        answer: "console.log"
+        title: "What is the capital city of UK?",
+        choices: ["Edinburgh","London","Cardiff","Belfast"],
+        answer: "London"
     },
-    {    title: "Commonly used data types Do Not include:",
-        choices: ["strings","booleans","alerts","numbers"],
-        answer: "alerts"
+    {    title: "Which coffee is the best?",
+        choices: ["Sainsburys","Asda","Tesco","Kenco"],
+        answer: "Kenco"
     }, 
     {
-        title: "String values must be enclosed within ____ when being assigned to variables.",
-        choices: ["commas","curly brackets","quotes","parentheses"],
-        answer: "quotes"
+        title: "How old am I?",
+        choices: ["15 years old","20 years old","30 years old","39 years old"],
+        answer: "39 years old"
     }   
 ]
 
