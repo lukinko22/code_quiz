@@ -44,3 +44,20 @@ function nextQuestion() {
         endGame();
     }
 }
+startButton.addEventListener('click', function() {
+    startScreenElement.setAttribute('class', 'hide');
+    questionsContainer.setAttribute('class', 'visible');
+
+    currentQuestion = 0;
+    populateQuestion(questions[currentQuestion]);
+
+    counter = 60;
+    timer = setInterval(function() {
+        counter--;
+        timerContainerText.textContent = counter;
+        if (counter <= 0) {
+            endGame();
+            clearInterval(counter);
+        }
+    }, 1000);
+});
