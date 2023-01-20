@@ -36,3 +36,11 @@ function endGame() {
     finalScoreContainer.textContent = score;
     clearInterval(timer);
 }
+function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+        populateQuestion(questions[currentQuestion]);
+    } else {
+        endGame();
+    }
+}
