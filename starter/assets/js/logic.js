@@ -71,3 +71,19 @@ choicesContainer.addEventListener('click', function(event){
         nextQuestion();
     }
 })
+function saveHighscore(initial) {
+    var recordScore = [{Initial:initial,Score:score}];
+    if(localStorage.getItem('highscores') === null){
+        localStorage.setItem('highscores', JSON.stringify(recordScore)); 
+    }else{
+        var retrieveHighscores = JSON.parse(localStorage.getItem('highscores'));
+        retrieveHighscores.push({Initial:initial,Score:score});
+        var sortedData = retrieveHighscores.sort(function(a,b){return b.Score-a.Score});
+        localStorage.setItem('highscores', JSON.stringify(sortedData));
+    }
+}
+submitButton.addEventListener('click', function(){
+    var initial = initialInput.value.trim();
+    saveHighscore(initial);
+    location.replace('highscores.html');
+})
