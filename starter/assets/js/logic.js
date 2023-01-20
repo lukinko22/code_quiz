@@ -61,3 +61,13 @@ startButton.addEventListener('click', function() {
         }
     }, 1000);
 });
+choicesContainer.addEventListener('click', function(event){
+    var selectedAnswer = event.target.textContent;
+    if(selectedAnswer === questions[currentQuestion].answer){
+        score += 1;
+        nextQuestion();
+    }else{
+        counter -= 10;
+        nextQuestion();
+    }
+})
