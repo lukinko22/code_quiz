@@ -30,3 +30,9 @@ function populateQuestion(question) {
     }
     choicesContainer.appendChild(choicesList)
 }
+function endGame() {
+    questionsContainer.setAttribute('class', 'hide');
+    endScreenContainer.setAttribute('class', 'visible');
+    finalScoreContainer.textContent = score;
+    clearInterval(timer);
+}
