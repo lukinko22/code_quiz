@@ -15,3 +15,18 @@ var timerContainerText = document.getElementById('time');
 var finalScoreContainer = document.getElementById('final-score');
 var initialInput = document.getElementById('initials');
 var highscoresContainer = document.getElementById('highscores');
+
+function populateQuestion(question) {
+    var currentQuestion = question.title;
+    var currentChoices = question.choices;
+
+    choicesContainer.innerHTML = '';
+    questionsTitle.textContent = currentQuestion;
+    var choicesList = document.createElement('ul');
+    for (let i = 0; i < currentChoices.length; i++) {
+        var choice = document.createElement('button');
+        choice.textContent = currentChoices[i];
+        choicesList.appendChild(choice);
+    }
+    choicesContainer.appendChild(choicesList)
+}
